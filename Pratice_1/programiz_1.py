@@ -64,7 +64,7 @@
 # print(max(lst))
 
 
-## Python Program to Check Prime Number
+# # Python Program to Check Prime Number
 # n = int(input('Enter any no :'))
 # def primeNumber(n):
 #     for x in range(2,n):
@@ -77,7 +77,7 @@
 # primeNumber(n)
 
 
-## Get a list of prime no in range
+# ## Get a list of prime no in range
 # def primeList(a, b):
 #     for x in range(a, b):
 #         for i in range(2, x):
@@ -86,6 +86,7 @@
 #         else:
 #             print(x)
 # print(primeList(4, 100))
+
 
 
 ##Python Program to Find the Factorial of a Number
@@ -111,7 +112,7 @@
 # def fabSeries(n):
 #     Num1 = 0
 #     Num2 = 1
-#     print(Num1,Num2,sep='/n')
+#     print(Num1,Num2,sep='\n')
 #     for i in range(n + 1):
 #         Sum = Num1 + Num2
 #         Num1 = Num2
@@ -220,7 +221,7 @@
 # fabRecur()
 
 
-## Python program to find the sum of natural using recursive function
+# Python program to find the sum of natural using recursive function ,factorial
 # def rec_fab(n):
 #     if n <= 1:
 #         return n
@@ -261,9 +262,9 @@
 # word.sort()
 # print(word)
 # print(''.join(word))
-#
-# string ="This is string which gona be sort alphabetically"
-# new = string.split()
+
+# string ="This is string which gonna be sort alphabetically"
+# new = string.casefold().split()
 # new.sort()
 # print(new)
 # print(' '.join(new))
@@ -293,7 +294,7 @@ string = 'Hello, have you tried our tutorial section yet?'
 #         count = count+1
 # print('Total no of volues in string is :',count)
 
-# Example =2
+##Example =2
 # newString = list(string)
 # countdir = {}
 # for i in newString:
@@ -301,31 +302,35 @@ string = 'Hello, have you tried our tutorial section yet?'
 #     countdir[i] = count
 # print(countdir)
 # for key, value in countdir.items():
-#     if key in vowels:
-#         print(key,value)
-
-## Python Program to Find the Size (Resolution) of a Image
-def jpeg_res(filename):
-    """"This function prints the resolution of the jpeg image file passed into it"""
-
-    # open image for reading in binary mode
-    with open(filename, 'rb') as img_file:
-        # height of image (in 2 bytes) is at 164th position
-        img_file.seek(163)
-
-        # read the 2 bytes
-        a = img_file.read(2)
-
-        # calculate height
-        height = (a[0] << 8) + a[1]
-
-        # next 2 bytes is width
-        a = img_file.read(2)
-
-        # calculate width
-        width = (a[0] << 8) + a[1]
-
-    print("The resolution of the image is", width, "x", height)
+#     if key not in vowels:
+#         countdir.popitem()
+#     else:
+#         pass
+# print(countdir)
 
 
-jpeg_res("img1.jpg")
+# ## Python Program to Find the Size (Resolution) of a Image
+# def jpeg_res(filename):
+#     """"This function prints the resolution of the jpeg image file passed into it"""
+#
+#     # open image for reading in binary mode
+#     with open(filename, 'rb') as img_file:
+#         # height of image (in 2 bytes) is at 164th position
+#         img_file.seek(163)
+#
+#         # read the 2 bytes
+#         a = img_file.read(2)
+#
+#         # calculate height
+#         height = (a[0] << 8) + a[1]
+#
+#         # next 2 bytes is width
+#         a = img_file.read(2)
+#
+#         # calculate width
+#         width = (a[0] << 8) + a[1]
+#
+#     print("The resolution of the image is", width, "x", height)
+#
+#
+# jpeg_res("img1.jpg")

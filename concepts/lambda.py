@@ -19,9 +19,9 @@
 ## MAP() ,FILTER() ,REDUCE()
 from functools import reduce
 
-num = [1, 4, 7, 2, 9, 10, 24, 12, 3]
+num = [1, 4, 7, 2, 9, 10, 24, 12, 3,10]
 
-even = list(filter(lambda n: n % 2 == 0, num))
+even = list(filter(lambda n: n % 2 == 0, num))  #set to remove duplicates
 print(even)
 
 # The map() function applies a given function to each item of an iterable (list, tuple etc.) and returns a list of the results.

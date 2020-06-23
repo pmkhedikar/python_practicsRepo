@@ -1,6 +1,11 @@
 import sys
+import json
+import functools
+import array
 
-lst = [2, 5, 20, 0, 'a', 34, 45]
+
+
+# lst = [2, 5, 20, 0, 'a', 34, 45]
 
 # for i in lst:
 #     if i % 5 == 0:
@@ -22,8 +27,8 @@ lst = [2, 5, 20, 0, 'a', 34, 45]
 #     try:
 #         if i % 5 ==0:
 #             print('Perfectly divisible to 5',i)
-#         except:
-#             print('Opps! Got error =>', sys.exc_info()[0])
+#     except:
+#         print('Opps! Got error =>', sys.exc_info()[0])
 
 
 
@@ -41,7 +46,7 @@ lst = [2, 5, 20, 0, 'a', 34, 45]
 
 
 ##########################################################################
-#Raise
+##Raise
 # try:
 #     n = int(input('Enter any no :'))
 #     if n <=0:
