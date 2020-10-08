@@ -9,13 +9,19 @@
 #         print( 'config is :', self.ram, self.memory )
 #
 #
+
+
+
 # phone1 = phone('2','32gb')
 # phone1.config('2','32gb')
 
 
-## self & Constructor
-## Self represents the instance of the class. By using the “self” keyword we can access the attributes(Variable) and methods(fuction) of the class in python.
-## "__init__" is a reseved method in python classes. It is called as a constructor in object oriented terminology.
+## Self & Constructor
+## Self represents the instance of the class.
+## By using the “self” keyword we can access the attributes(Variable) and methods(Function) of the class in python.
+
+## "__init__" is a reserved method in python classes.
+## It is called as a constructor in object oriented terminology.
 ## This method is called when an object is created from a class and it allows the class to initialize the attributes of the class.
 #
 # class Phone:
@@ -38,13 +44,13 @@
 # p1 = Phone()
 # p2 = Phone()
 # # p1.name ='iphone'     #update name 1 outside the class
-# # print(p1.name)
-# #
-# # p2.update()         #called update method to change the name
-# # print(p2.name)
+# print(p1.name)
+# # #
+# p2.update()         #called update method to change the name
+# print(p2.name)
 #
-# # p2.update()
-# # p2.price =30
+# p2.update()
+# p2.price =30
 # print(p1.price)
 # print(p2.price)
 # print(p1.compare(p2))
@@ -53,7 +59,7 @@
 
 # class Car():
 #
-#     wheels = 4                #class/static variable
+#     wheels = 4                #class variable
 #
 #     def __init__(self):
 #         self.name = 'VOLVO'   # Instance Variable
@@ -61,14 +67,15 @@
 # c1 = Car()
 # c2 = Car()
 # c2.name = 'BMW'  # update the name of an object c2
-# Car.wheels = 6   # update the class variable Variables
+# Car.wheels =  8 # update the class variable Variables
+# c2.color = 'Black'
 #
 # print(c1.name,c1.color,c1.wheels)
 # print(c2.name,c2.color,c2.wheels)
 
 
 ## Instance Method , Class method ,Static Method
-#
+
 # class School():
 #
 #     schoolName = 'NPK SCHOOL'
@@ -101,8 +108,8 @@
 
 ## Inner Class in Python
 ## Can create the object of child class in parent class
-# ## Can create the object of child class outside the parent class - but u have to call the parent class
-#
+## Can create the object of child class outside the parent class - but u have to call the parent class
+
 # class Student():
 #
 #     def __init__(self,name,rollNo):
@@ -134,7 +141,8 @@
 # print(lap1.brand,lap1.ram,lap1.cpu)
 
 
-############################################################################# Inheritance Parent - child relation
+#############################################################################
+##  Inheritance Parent - child relation
 ##  Inheritance allows us to define a class that inherits all the methods and properties from another class
 # class A:
 #     def feature1(self):
@@ -147,28 +155,33 @@
 #         print('Class B - Feature  3')
 #     def feature4(self):
 #         print('Class B - Feature 4')
+#     def feature1(self):
+#         print('Class B - Feature 1')
 #
-# class C(A,B):
+# class C(B,A):
 #     def feature5(self):
 #         print( 'Class C - Feature  5' )
-#
+#     def feature1(self):
+#         print('Class C - Feature 1')
+
 # a1 = A()        # As its parent class ,uses the method of class A only
 # a1.feature1()
-
-# b1 = B()         #Can access all the methonds in A & B class
-# b1.feature2()
 #
+# b1 = B()         #Can access all the methods in A & B class
+# b1.feature2()
+
 # c1 = C()
-# c1.feature4()   # Multilevel Inheretance can access method in both A & B class
+# # c1.feature4()   # Multilevel inheritance can access method in both A & B class
+# c1.feature1()
 
 
-
-################################################################# - Constructor in inheritance
-## 1. if __init__ method not found in sub-class exexute the __init__ in parent class
+#################################################################
+## - Constructor in inheritance
+## 1. if __init__ method not found in sub-class execute the __init__ in parent class
 ## 2. if __init__ method found in sub-class execute the __init__ in subclass
 ## 3. if want to call __inti__ in parent class use the keyword super to call the method in parent class
 ## MRO - method resolution order  - Give the preference from left to right C(B,A)
-
+# #
 # class A:
 #     def __init__(self):
 #         print('Class -A ,init method')
@@ -176,6 +189,8 @@
 #         print('Class A - Feature 1')
 #     def feature2(self):
 #         print('Class A - Feature 2')
+#     def feature3(self):
+#         print('Class A - Feature  3')
 #
 # class B:
 #     def __init__(self):
@@ -186,18 +201,20 @@
 #     def feature4(self):
 #         print('Class B - Feature 4')
 #
-# class C(B,A):
+# class C(A,B):
 #     def __init__(self):
 #         super().__init__()
 #         print('Class -C ,init method')
 #     def feature5(self):
 #         print( 'Class C - Feature  5' )
-#
+#     # def feature3(self):
+#     #     print('Class C - Feature  3')
+# #
 # c1 = C()
+# c1.feature3()
 
-
-
-################################################################################# Polymorphism (Many + Form)
+#################################################################################
+## Polymorphism (Many + Form)
 ## concept of using common operation in diff ways for diff data inputs
 ## 1.Duck typing - Interface / class should have that method that what we concern
 ## you shouldn't care what type of object you have - just whether or not you can do the required action with your object.
@@ -219,7 +236,7 @@
 #         ide.execute()
 #
 # ide1 = Pycharm()
-# ide2 =Myeditor()
+# ide2 = Myeditor()
 # lap1 = Laptop()
 # lap1.code(ide2)
 
@@ -274,7 +291,7 @@
 # print(s1.sum(1,2))
 
 
-### Method Overridding
+## Method Over-ridding
 ## Override means having two methods with the same name but doing different tasks.
 ## It occurs by simply defining in the child class a method with the same name of a method in the parent class
 
@@ -291,3 +308,43 @@
 # a = B()      #Created a object for class B
 # a.show()     # It will first search the method in class B & if not found then check in class A
 #
+
+
+### Abstrcat class & method
+### ABC - abostract base classes
+### Encapsulation : Restrict the access the variable and methods// Hiding private details of class from other objects
+## Private(use with in class) & Public method (access outside the class)
+
+# class Car:
+#     __speed = 0   # Private Variable modify only inside class
+#     __name = ''
+#     def __init__(self):
+#         self.__speed = 100
+#         self.__name = 'BMW'
+#         #self.__update()   # Define inside __init method
+#
+#     def drive(self):
+#         #self.__update()   # Define inside method inside class
+#         print('Drive pubic method')
+#         print(self.__name)
+#         print(self.__speed)
+#
+#     def __update(self):    # can't access outside the class
+#         print('updating - Private Method')
+#
+#     def newUpdate(self,newname,maxspeed):
+#         self.__speed =maxspeed
+#         self.__name =newname
+#         print(newname,maxspeed)
+#
+# c1 = Car()
+# c1.drive()
+# c1.newUpdate('Audi',500)
+
+
+################################################################################################################################################################
+# class dance():
+#     def __init__(self,a):
+#         self.a = a
+# o1 = dance(15)
+# print(o1.a)

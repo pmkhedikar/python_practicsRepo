@@ -1,23 +1,18 @@
-# str = 'Hi There'
-# lst = list(str)
-# length = len(str)
-# newlist =[]
-# for i in range(length):
-#     newlist.append(lst[length-1-i])
-# print(newlist)
-# print(''.join(newlist))
+# def expand(str, low, high, s):
+#     while low >= 0 and high < len( str ) and str[low] == str[high]:
+#         s.add( str[low: high + 1])
+#
+#         low = low + 1
+#         high = high + 1
+#
+#
 
 
-n = str('153')
-nlst = list(n)
 
-def amstronNumber(n):
-    length = int(len(nlst))
-    summmation = int(nlst[0])**(length)+int(nlst[1])**(length)+int(nlst[2])**(length)
-    if int(n) == summmation:
-        print('{0} is Amstrong no '.format(n))
-    else:
-        print('Sorry')
+fileOpen = open( r"C:\Users\paragk1\PycharmProjects\Practics_Stuff\automation_stuff\book_basics\list.py", 'r' )
+
+print( fileOpen.read() )
+
+if __name__ == '__main__':
 
 
-amstronNumber(n)

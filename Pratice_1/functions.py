@@ -17,22 +17,6 @@
 
 
 
-# # Print lower & upper case from string
-# string = 'America known As UN'
-# upper =[]
-# lower =[]
-# for i in string:
-#     if i.islower():
-#         lower.append(i)
-#     else:
-#         upper.append(i)
-# lower.sort(reverse=False)
-# upper.sort(reverse=False)
-#
-# print(''.join(lower))
-# print(upper)
-
-
 
 
 # # def String(a,b):
@@ -55,12 +39,4 @@
 
 
 
-# # Get the char count in string
-# string = 'i am awesomee'
-# countDir ={}
-#
-# for i in string:
-#     #print(string.count(i))
-#     count = string.count(i)
-#     countDir[i]=count
-# print(countDir)
+

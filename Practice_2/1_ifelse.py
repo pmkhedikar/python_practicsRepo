@@ -28,3 +28,20 @@
 #
 # year = int(input())
 # print(is_leap(year))
+
+string1 = 'Parag Khedikar'
+dict1 = {}
+lst = list( string1 )
+
+for i in lst:
+    count = lst.count( i )
+    dict1[i] = count
+
+del dict1[' ']
+print( dict1 )
+
+# count = {}
+# for i in name:
+#     count.setdefault(i,0)
+#     count[i] = count[i] + 1
+# print(count)

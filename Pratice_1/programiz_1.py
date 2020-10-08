@@ -68,7 +68,7 @@
 # n = int(input('Enter any no :'))
 # def primeNumber(n):
 #     for x in range(2,n):
-#         if n % x ==0:
+#         if n % x == 0:
 #             print('{0} is NOT prime number'.format(n))
 #             break
 #     else:
